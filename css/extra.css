@@ -1,0 +1,129 @@
+body{  
+    background-color: #fffbf8;
+    color:black;
+    text-align:center;
+}
+.cabecera{
+    background-color: black;
+}
+.cabecera a{
+    color:white;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.centro{
+    width: 100%;
+    max-width: 1920px;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+	width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nombre{
+    margin: 20px 0px;
+    width: auto;
+    font-size: 60px;
+}
+.textoGeneral{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    flex-grow: 1; /* Este elemento ocupa el espacio restante */
+    font-size: 20px;
+    align-items: center;
+}
+.info{
+    padding: 15px 20px;
+    max-width: 750px;
+    display: flex;
+    text-align: justify;
+}
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 650px;
+    flex-shrink: 0; /* Evita que se reduzca más allá del 80% */
+    padding: 20px;
+}
+.img1{
+    align-self: flex-start;
+}
+.img3{
+    align-self: flex-start;
+}
+.img2{
+    align-self: flex-end;
+}
+img{
+    width: 300px;
+    height: auto;
+}
+.tablas{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.datos{
+    display: block;
+    width: 100%;
+}
+table{
+    width: 300px;
+    border:1px solid black;
+    border-collapse: collapse;
+    margin: 20px;
+}
+td{
+    border:1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+th{
+    height: 20px;
+}
+@media (min-width: 1071px){
+    .nombre{
+        font-size: 80px;
+        text-align: left;
+        padding-left: 120px;
+    }
+    .textoGeneral{
+        padding: 0px 100px;
+        font-size: 25px;
+    }
+    .contenedor{
+        flex-wrap: nowrap;
+    }
+    .imagenes{
+        width: 35%;
+        max-width:none;
+        padding: 0px;
+        position: relative;
+    }
+    .img1{
+        position: absolute;
+        left:5%;
+    }
+    .img2{
+        position: absolute;
+        top:25%;
+        right: 5%;
+        z-index: 1;
+    }
+    .img3{
+        position: absolute;
+        bottom:0%;
+        left:5%;
+    }
+    img{
+        width: 250px;
+    }
+}

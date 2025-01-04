@@ -1,0 +1,35 @@
+body{  
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los contenedores pasen a la siguiente fila si no caben */
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    display: flex;
+    background-color: #242424;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='6' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23grain)' fill='%23181818'/%3E%3C/svg%3E");
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    flex-direction: column; /* Coloca los elementos en una columna (verticalmente) */
+    justify-content: space-evenly; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    width: 23%; /* Ajusta el ancho relativo al contenedor principal */
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+    aspect-ratio: 1 / 2; /* Mantiene una proporción de 1:2 */
+    margin: 10px; /* Espaciado entre los contenedores */
+    min-width: 350px;
+}
+a{
+    display: inline-block;
+    width: 90%;
+}
+.cover img {
+    width: 100%; /* Ajusta el tamaño de las imágenes relativo al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 950px; /* Límite máximo para pantallas grandes */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+.cover img:hover {
+    transform: scale(1.02); /* Aumenta el tamaño al 110% */
+}

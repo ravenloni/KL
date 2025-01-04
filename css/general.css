@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
+.cabecera {
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cabecera a {
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+    margin: 0 15px;
+}

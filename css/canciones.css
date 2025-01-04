@@ -1,0 +1,188 @@
+ /* Contenedor principal con scroll */
+ .contenedor {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100vh - 50px); /* Restamos el tamaño de la cabecera */
+	overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+/* Separador */
+.espaciador {
+	height: 20px;
+	width: 100%;
+	border-bottom: white 1px solid;
+}
+/* Contenido principal */
+.contenido {
+	border-bottom: white 1px solid;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	
+}
+
+/* Sección de texto e imagen */
+.izq {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+}
+.nombre {
+	font-size: 3.5rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	min-width: 450px;
+}
+.masinfo{
+	text-align: center;
+}
+.info{
+	min-width: 300px;
+	border: white 1px solid;
+	margin: 20px 0;
+	padding: 10px;
+	display: inline-block; /* Permite que el ancho del div se ajuste al contenido */
+	white-space: nowrap; 
+}
+.grande{
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	margin: 0px;
+}
+.pequeño{
+	margin-bottom: 15px;
+}
+.barraAudio{
+	margin-top: 15px;
+}
+audio {
+	min-width: 300px;
+}
+
+.imagen {
+	display: flex;
+	width: 41%;
+	height: auto; /* Deja que la altura se ajuste automáticamente */
+	margin:0px;
+}
+.imagen img {
+	width: 100%;
+	height: auto;
+}
+
+/* Sección extra */
+.extra {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.sobre {
+	max-width: 950px;
+	padding: 35px;
+	text-align: justify;
+}   
+/* Responsividad */
+
+/* Pantallas medianas (laptops y tabletas horizontales) */
+@media (min-width: 1071px) { /* Estilos para pantallas medianas */ 
+	.grande{
+		visibility: visible;
+		width: 100%;
+		height: auto;
+	}
+	
+	.pequeño{
+		visibility: hidden;
+		height: 0px;
+		width: 0px;
+		margin: 0px;
+	}
+	.contenedor{
+		align-items: end;
+	}
+	.masinfo{
+		text-align: left;
+		margin-left: 30px;
+		width: 50%;
+	}
+	.info{
+		max-width: 550px;
+	}
+	.barraAudio{
+		height: 60px;
+	}
+	.contenido{
+		border: white 1px solid;
+		border-top: 0px;
+		align-items: start;
+		width: 95%;
+	}
+	.extra{
+		border: 1px solid white;
+		border-top: 0px;
+		width: 95%;
+		justify-content: flex-start;
+	}
+	.izq{
+		flex-grow: 1;
+	}
+	.imagen{
+		width: 41%;
+		height: auto;
+		margin: 0px;
+		border-left: white 1px solid;
+	}
+	.nombre{
+		max-width: 500px;
+		display: inline-block; /* Permite que el ancho del div se ajuste al contenido */
+	}
+}
+	
+/* Tabletas (horizontal y vertical) */
+@media (max-width: 1070px) {
+	.imagen{
+		width: 60%;
+	}
+	.pequeño{
+		width: 100%;
+	}
+}
+
+/* Teléfonos grandes (smartphones grandes) */
+@media (max-width: 768px) { /* Estilos para smartphones grandes */ 
+	
+	.contenido{
+		width: 100%;
+		justify-content: center;
+	}
+	.extra{
+		width: 100%;
+	}
+	.imagen{
+		width: 70%;
+		margin: 30px 0px;
+	}
+	.pequeño{
+		visibility: visible;
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-width: 480px){
+	.cabecera{
+		font-size: 16px;
+	}
+	.nombre{
+		font-size: 75px;
+		margin: 0px;
+	}
+	.sobre{
+		padding: 20px;
+	}
+}
+
+
