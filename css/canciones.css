@@ -89,6 +89,9 @@ audio {
 
 /* Pantallas medianas (laptops y tabletas horizontales) */
 @media (min-width: 1071px) { /* Estilos para pantallas medianas */ 
+	body{
+		font-size: 20px;
+	}
 	.grande{
 		visibility: visible;
 		width: 100%;
